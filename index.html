@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Dev Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <header>
+            <h1>🚀 Dev Hub</h1>
+            <p>Track your projects, tasks, and notes.</p>
+        </header>
+
+        <main class="grid-layout">
+            <!-- Left Panel: Task Manager -->
+            <section class="panel tasks-panel">
+                <h2>📅 Tasks & Scheduling</h2>
+                
+                <form id="task-form" class="task-form">
+                    <div class="input-row">
+                        <!-- Native emoji input or simple text field where user can paste/type an emoji -->
+                        <input type="text" id="task-emoji" placeholder="🎯" maxlength="2" class="emoji-input">
+                        <input type="text" id="task-desc" placeholder="What project task are we tackling?" required class="desc-input">
+                    </div>
+                    
+                    <div class="input-row">
+                        <label for="task-time">Due Date & Time:</label>
+                        <input type="datetime-local" id="task-time" required>
+                    </div>
+                    
+                    <button type="submit" class="btn-primary">Add Task</button>
+                </form>
+
+                <div id="tasks-list" class="items-list">
+                    <!-- Tasks will dynamically appear here -->
+                </div>
+            </section>
+
+            <!-- Right Panel: Notes -->
+            <section class="panel notes-panel">
+                <h2>📝 Project Notes & Brainstorms</h2>
+                <textarea id="notes-area" placeholder="Write down your project structures, API ideas, or future features here..."></textarea>
+                <button id="save-notes-btn" class="btn-secondary">Save All Notes</button>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
